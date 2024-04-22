@@ -140,3 +140,7 @@ footer p {
     75% {height: 40px;}
     100% {height: 20px;}
 }
+
+h2, p {
+    align-self: flex-start;
+}
