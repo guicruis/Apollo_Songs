@@ -144,3 +144,90 @@ footer p {
 h2, p {
     align-self: flex-start;
 }
+
+.geral {
+    background-color: white;
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+     border-radius: 10px;
+    box-shadow: #00000077 0px 5px 5px;
+    align-items: center;
+    width: 900px; 
+    height: 300px;
+    margin: auto;
+
+}
+
+.contato {
+    display: flex;
+     
+   
+}
+
+.redes-sociais {
+    color: #fff;
+    padding: 20px;
+}
+
+.mensagem {
+    width: 450px;
+    color: #bfdf1e;
+    padding: 20px;
+    text-align: right;
+    margin-left: auto;
+}
+
+.redes-sociais h3,
+.mensagem h3 {
+    margin-top: 0;
+    color: #0E0D09;
+    margin: 10px;
+}
+
+.redes-sociais a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.mensagem textarea {
+    width: 100%;
+    height: 90px;
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.mensagem button {
+    background-color: #AF490E;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.mensagem button:hover {
+    background-color: #D06E05;
+}
+
+.contato-h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    font-weight: 300;
+}
+
+.imagem-fundo{
+    width: 100%; 
+    height: 380px;
+    margin: 0px;
+    z-index: -1;
+    position: absolute;
+    box-shadow: #00000077 0px 2px 2px;
+}
