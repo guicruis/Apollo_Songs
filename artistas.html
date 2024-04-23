@@ -1,11 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apollo Songs - Página Inicial</title>
     <link rel="stylesheet" href="assets/styles/index.css">
+
+    <style>
+        main {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            align-self: flex-start;
+            text-align: left;
+            font-weight: 500;
+        }
+
+        p {
+            font-weight: 400;
+        }
+
+        ul {
+            align-self: flex-start;
+            list-style-type: none;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        section {
+            margin-bottom: 10px;
+        }
+
+        * {
+            outline: none !important;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #wrap {
+            background-color: rgba(0, 0, 0, 0.8);
+            position: relative;
+            width: 150px;
+            height: 150px;
+            align-self: flex-start;
+        }
+
+        #album {
+            position: absolute;
+            top: -40%;
+            height: 100%;
+            width: 100%;
+        }
+
+        #cover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://i.pinimg.com/originals/68/25/ed/6825ed53828f180e96da512f9ee7732e.jpg');
+            background-size: 100% 100%;
+            box-shadow: 5px 0 20px 0 rgba(0, 0, 0, 0.6), inset 0 0 10px 5px rgba(255, 255, 255, 0.2), inset 0 0 4px 2px rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+        }
+
+        #cover::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+            background-image: url('http://i.imgur.com/i0fMWpe.jpg');
+            background-size: 100% 100%;
+            border-radius: 4px;
+            mix-blend-mode: screen;
+            opacity: 0.5;
+            content: '';
+        }
+
+        #cover::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 20;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://orig06.deviantart.net/0124/f/2013/136/6/7/texture_326_by_sirius_sdz-d65gs3s.jpg');
+            background-size: 100% 100%;
+            border-radius: 4px;
+            mix-blend-mode: screen;
+            opacity: 0.2;
+            content: '';
+        }
+
+        #vinyl {
+            position: absolute;
+            top: 2.5%;
+            left: 2.5%;
+            z-index: 0;
+            width: 95%;
+            height: 95%;
+            display: block;
+            background-image: url('https://gallery.yopriceville.com/var/resizes/Free-Clipart-Pictures/Music-PNG/Gramophone_Vinyl_LP_Record_PNG_Transparent_Clip_Art_Image.png?m=1462983196');
+            background-size: 106% 106%;
+            background-position: center;
+            box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.6);
+            border-radius: 50%;
+            content: '';
+            -webkit-animation: 5s linear spinThat infinite, 1s ease-out getOut 1s forwards;
+            animation: 5s linear spinThat infinite, 1s ease-out getOut 1s forwards;
+        }
+
+        #vinyl::before {
+            position: absolute;
+            top: 2.5%;
+            left: 2.5%;
+            z-index: 10;
+            width: 95%;
+            height: 95%;
+            background-image: url('http://www.designresourcebox.com/ths/diverse/blacktextures/82267467.jpg');
+            background-size: 100% 100%;
+            border-radius: 50%;
+            mix-blend-mode: screen;
+            opacity: 0.3;
+            content: '';
+        }
+
+        #vinyl #print {
+            position: absolute;
+            top: 33%;
+            left: 33%;
+            height: 34%;
+            width: 34%;
+            box-shadow: inset 0 0 0 5px rgba(150, 150, 150, 0.5);
+            background-image: url('http://assets.teamrock.com/image/14d29742-c6f7-43f6-bbe1-6bf7b3b34c6f?w=800');
+            background-size: cover;
+            border-radius: 50%;
+        }
+
+        @-webkit-keyframes getOut {
+            0% {
+                left: 0;
+            }
+
+            100% {
+                left: 50%;
+            }
+        }
+
+        @keyframes getOut {
+            0% {
+                left: 0;
+            }
+
+            100% {
+                left: 50%;
+            }
+        }
+
+        @-webkit-keyframes spinThat {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spinThat {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        footer {
+            z-index: 100;
+        }
+
+        .title-div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .section-artist {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 0px;
+            align-items: center;
+
+        }
+
+        .section-content {
+            display: flex;
+            width: 75%;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
 </head>
+
 <body>
     <header>
         <div>
@@ -24,14 +241,96 @@
     </header>
 
     <main>
-        <!-- Separe o layout do site por seções -->
-        <section>
-            
+        <section class="section-artist">
+            <div class="title-div">
+                <h2>Hip Hop</h2>
+                <div id="wrap">
+                    <div id="album">
+                        <div id="cover">
+                            <div id="print">
+                            </div>
+                        </div>
+                        <div id="vinyl">
+                            <div id="print">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-content">
+                <p>O hip hop é um gênero musical que surgiu na década de 1970 nas comunidades afro-americanas e latinas
+                    de Nova Iorque. Alguns dos principais cantores de hip hop incluem:</p>
+                <ul>
+                    <li>Eminem - Conhecido por suas letras impactantes e habilidades de rap.</li>
+                    <li>Jay-Z - Um dos artistas mais bem-sucedidos e influentes do hip hop.</li>
+                    <li>Kendrick Lamar - Reconhecido por suas letras profundas e habilidades líricas.</li>
+                </ul>
+            </div>
         </section>
+
+        <section class="section-artist">
+            <div class="title-div">
+                <h2>Pop</h2>
+                <div id="wrap">
+                    <div id="album">
+                        <div id="cover">
+                            <div id="print">
+                            </div>
+                        </div>
+                        <div id="vinyl">
+                            <div id="print">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-content">
+                <p>O pop é um gênero musical que surgiu na década de 1950 e se tornou popular em todo o mundo. Alguns
+                    dos principais cantores de pop incluem:</p>
+                <ul>
+                    <li>Michael Jackson - Conhecido como o Rei do Pop.</li>
+                    <li>Madonna - Uma das artistas mais bem-sucedidas e influentes do pop.</li>
+                    <li>Taylor Swift - Reconhecida por suas músicas cativantes e letras pessoais.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section-artist">
+            <div class="title-div">
+                <h2>Rock</h2>
+                <div id="wrap">
+                    <div id="album">
+                        <div id="cover">
+                            <div id="print">
+                            </div>
+                        </div>
+                        <div id="vinyl">
+                            <div id="print">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-content">
+                <p>O rock é um gênero musical que surgiu na década de 1950 e se tornou popular em todo o mundo. Alguns
+                    dos principais cantores de rock incluem:</p>
+                <ul>
+                    <li>Elvis Presley - Conhecido como o Rei do Rock.</li>
+                    <li>The Beatles - Uma das bandas mais influentes e bem-sucedidas da história do rock.</li>
+                    <li>Queen - Reconhecida por suas músicas icônicas e performances energéticas.</li>
+                </ul>
+            </div>
+        </section>
+
     </main>
 
     <footer>
         <p>&copy; 2024 Apollo Songs. Todos os direitos reservados.</p>
     </footer>
+
 </body>
+
 </html>
