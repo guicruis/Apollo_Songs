@@ -5,6 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apollo Songs - Página Inicial</title>
     <link rel="stylesheet" href="assets/styles/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" /><style>
+        .card-musica{
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            border-radius: 20px;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.115); 
+        }
+        .titulo_card {
+            font-size: 2rem;
+            font-weight: 400;
+        }
+        .subtitulo {
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+        iframe {
+            border-radius: 10px;
+        }
+
+        .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+        cursor: pointer;
+        }
+
+        .likes {
+            display: flex;
+            gap: 30px;
+        }
+
+        .titulo {
+            font-weight: 300;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -16,8 +54,8 @@
             <ul>
                 <li><a href="index.html">Início</a></li>
                 <li><a href="sobrenos.html">Sobre</a></li>
-                <li style="font-weight: bold;"><a href="artistas.html">Artistas</a></li>
-                <li><a href="musicas.html">Músicas</a></li>
+                <li><a href="artistas.html">Artistas</a></li>
+                <li style="font-weight: bold;"><a href="musicas.html">Músicas</a></li>
                 <li><a href="contato.html">Contato</a></li>
             </ul>
         </nav>
@@ -26,12 +64,52 @@
     <main>
         <!-- Separe o layout do site por seções -->
         <section>
-            
+            <h1 class="titulo">
+                Musica em alta no momento 🌟
+            </h1>
+            <div class="card-musica">
+                <h1 class="titulo_card">Daniel "Tonhão"</h1>
+                <h2 class="subtitulo">Era um vez - cover</h2>
+                
+                <iframe width="450" height="225" src="https://www.youtube.com/embed/v8tGyXMzAjQ?si=fmidKkJKpLl_xdbI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="likes">
+                    <span class="material-symbols-outlined" id="likebtn" onclick="estilizarBtnLike()">
+                        thumb_up
+                    </span>
+                        <span class="material-symbols-outlined" id="dislikebtn" onclick="estilizarBtnDislike()">
+                            thumb_down
+                        </span>
+                </div>
+               
+            </div> 
         </section>
     </main>
 
     <footer>
         <p>&copy; 2024 Apollo Songs. Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        function estilizarBtnLike(){
+            let button = document.getElementById("dislikebtn")
+            let buttonLike = document.getElementById("likebtn")
+            if(buttonLike.style.color !== "green" && button.style.color !== "red"){
+                buttonLike.style.color = "green"
+            }else {
+                buttonLike.style.color = "black"
+            }
+
+        }
+
+        function estilizarBtnDislike(){
+            let button = document.getElementById("dislikebtn")
+            let buttonLike = document.getElementById("likebtn")
+            if(button.style.color !== "red" && buttonLike.style.color !== "green"){
+                button.style.color = "red"
+            }else {
+                button.style.color = "black"
+            }
+        }
+    </script>
 </body>
 </html>
