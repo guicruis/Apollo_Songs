@@ -155,7 +155,7 @@ h2, p {
     align-items: center;
     width: 300px;
     padding: 16px;
-    background-color: hsl(0, 0%, 86%); 
+    background-color: white; 
     color: rgb(0, 0, 0); 
     box-shadow: #0E0D09 0px 5px 5px;
     border-radius: 8px;
